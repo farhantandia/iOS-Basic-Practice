@@ -122,5 +122,21 @@ for i in stride(from :0, to: numbers.count, by: 1){
    
    print(password)
 
+struct Town {
+    let name: String
+    var citizens: [String]
+    var resources: [String:Int]
+    
+    init(name: String, citizens: [String], resources: [String:Int]) {
+        self.name = name
+        self.citizens = citizens
+        self.resources = resources
+    }
+}
+
+var myTown = Town(name: "Konoha", citizens: ["Naruto","Sasuke"], resources: ["Bamboo" : 90])
+myTown.citizens.append("Sakura")
+print(myTown)
+
 
 
